@@ -1,0 +1,139 @@
+(function($) {
+//preloader
+    document.body.onload = function () {
+        setTimeout(function () {
+            $('#page-preloader').addClass('done');
+        }, 1000);
+        console.log('preloader');
+    };
+//select styler
+    $(function() {
+        $('select').styler({
+
+        });
+    });
+})(jQuery);
+
+// попап вход
+$('#enter-popup').on('click', function(){
+    $('#enter-form-id').bPopup({
+        closeClass: 'close-modal-btn'
+    });
+});
+//попап регистрация
+$('#reg-popup').on('click', function(){
+    $('#registration-form-id').bPopup({
+        closeClass: 'close-modal-btn'
+    });
+});
+//открыть фильтер
+$('.btn-menu').on('click', function(){
+    if($(this).hasClass('active')){
+        $('.main-filter').removeClass('active');
+    }else{
+        $('.main-filter').addClass('active');
+        var btnClose = '<div id="close_filter" class="close-modal-btn"><span></span><span></span></div>';
+        $('.filter-list-head').find('.filter-title').append(btnClose);
+    }
+    // $('.main-filter').toggleClass('active');
+});
+//закрыть фильтер
+$('.filter-title').on('click', function cls_filter(){
+    $('.main-filter').removeClass('active');
+    $('#close_filter').remove();
+    console.log('cls');
+})
+//попап оплата
+$('#mute').on('click', function(){
+    $('#payment-form-id').bPopup({
+        closeClass: 'close-modal-btn'
+    });
+});
+//перестройка гавной стр <@1023px
+function swichToMobile() {
+
+    $(".resume-item").each(function(index,elem) {
+        //перенос заголовка
+        var resumeHead  = $(this).find('.position-specialist').html();
+        var resumeCoast = $(this).find('.wage').html();
+        var headerBlock = `<div class="resume-head d-flex justify-content-between"><div class="position-specialist">${resumeHead}</div></div>`;
+        $(this).find('.resume-row .resume-head').remove();
+        $(this).append(headerBlock);
+        
+        //перенос фото
+        var resumeFoto  = $(this).find('.resume-foto').html();
+        var fotoBlock   = `<div class="resume-foto">${resumeFoto}</div>`;
+        $(this).find('.resume-foto').remove();
+        $(this).children('.resume-row').append(fotoBlock);
+
+        //перенос времени и цены
+        var resumeTime     = $(this).find('.visiting_time').html();
+        var timeCoastBlock = `<div class="resume-foot d-flex justify-content-between align-items-start"><div class="visiting_time">${resumeTime}</div><div class="wage">${resumeCoast}</div></div>`;
+        $(this).children('.resume-row').find('.visiting_time').remove();
+        $(this).append(timeCoastBlock);
+        console.log('mobile');
+    })
+
+}
+
+//перестройка гавной стр >@1023px
+function swichToDesctop() {
+    $(".resume-item").each(function(index,elem) {
+
+        //перенос заголовка и цены
+        var resumeHeadDesctop  = $(this).find('.resume-head').html();
+        var resumeCoastDesctop = $(this).children('.resume-foot').find('.wage');
+        var headerBlockDesctop = `<div class="resume-head d-flex justify-content-between">${resumeHeadDesctop}</div>`;
+        $(this).find('.resume-head').remove();
+        $(this).children('.resume-row').append(headerBlockDesctop);
+        var searchCoastBlock = $(this).children('.resume-row').children('.resume-head').hasClass('.wage');
+        if(searchCoastBlock){
+            $(this).children('.resume-row').children('.resume-head').find('.wage').remove();
+            $(this).children('.resume-row').children('.resume-head').append(searchCoastBlock);
+        }else{
+            $(this).children('.resume-row').children('.resume-head').append(resumeCoastDesctop);
+        }
+
+        //перенос фото
+        var resumeFotoDesctop  = $(this).find('.resume-foto').html();
+        var fotoBlockDesctop   = `<div class="resume-foto">${resumeFotoDesctop}</div>`;
+        $(this).children('.resume-row').find('.resume-foto').remove();
+        $(this).find('.resume-foto').remove();
+        $(this).append(fotoBlockDesctop);
+
+        //перенос времени
+        var resumeTimeDestop   = $(this).children('.resume-foot').find('.visiting_time');
+        $(this).find('.resume-foot').remove();
+        var searchBlock = $(this).children('.resume-row').hasClass('.visiting_time');
+        if(searchBlock) {
+            $(this).children('.resume-row').find('.visiting_time').remove();
+            $(this).children('.resume-row').append(searchBlock);
+        }else{
+            $(this).children('.resume-row').append(resumeTimeDestop);
+        }
+        console.log('desctop');
+        console.log('xxx',searchCoastBlock);
+    })
+}
+
+$(window).on('resize load',function () {
+    var widthWin       = document.body.clientWidth,   // ширина
+        heightWin      = document.body.clientHeight;  // высота
+    var $container_desctop = $('.resume-container').hasClass('desctop-win');
+    var $container_mobile  = $('.resume-container').hasClass('mobile-win');
+
+    if(widthWin <= 1023 && $container_desctop ){
+        $('.resume-container').removeClass('desctop-win');
+        $('.resume-container').addClass('mobile-win');
+        swichToMobile();
+        console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
+    }else if(widthWin >= 1024){
+        $('.resume-container').removeClass('mobile-win');
+        $('.resume-container').addClass('desctop-win');
+        swichToDesctop();
+        console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
+
+    }
+    console.log('size: ', 'width:', widthWin,'height:',heightWin);
+});
+
