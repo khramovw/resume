@@ -602,6 +602,26 @@ footer {
     display: block; } }
 
 @media all and (max-width: 1024px) {
+  .logo div:last-child {
+    line-height: 82px;
+    padding-left: 20px; }
+  .logo-wrap img {
+    display: none; }
+  .btn-menu-back span {
+    display: block;
+    width: 12px;
+    height: 3px;
+    background-color: #fff;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    top: 43px; }
+    .btn-menu-back span + span {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      top: 36px; }
   .crumbs-link {
     margin-top: 52px !important;
     padding: 0 16px !important; }
@@ -616,9 +636,6 @@ footer {
   .resume .crumbs-info li + li {
     margin-left: 0;
     margin-top: 0; }
-  .resume-file {
-    margin-left: -10px;
-    margin-right: -10px; }
   .resume .resume-file-main {
     -webkit-box-ordinal-group: 2;
     -webkit-order: 1;
@@ -626,22 +643,12 @@ footer {
             order: 1;
     padding: 15px; }
   .resume-file {
-    overflow-x: hidden; }
-  .resume-descriptionn {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; }
+    overflow-x: hidden;
+    margin-left: -10px;
+    margin-right: -10px; }
   .resume-foto {
-    -webkit-box-ordinal-group: 4;
-    -webkit-order: 3;
-        -ms-flex-order: 3;
-            order: 3; }
-  .similar-ads {
-    -webkit-box-ordinal-group: 5;
-    -webkit-order: 4;
-        -ms-flex-order: 4;
-            order: 4; }
+    padding: 0 15px;
+    margin-bottom: 25px; }
   .similar-box {
     width: -webkit-calc( 50% - 20px) !important;
     width: calc( 50% - 20px) !important; }
@@ -664,6 +671,24 @@ footer {
             flex-direction: column; }
   .resume .wrap-column > * {
     font-size: 18px; } }
+
+/*footer*/
+@media all and (max-width: 1024px) {
+  .footer {
+    height: 124px; }
+    .footer .container-fluid {
+      padding-top: 15px; }
+    .footer .footer-row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .footer .copyright {
+      padding: 15px 0; } }
 
 /*popup*/
 @media all and (max-width: 1024px) {

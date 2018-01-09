@@ -946,9 +946,17 @@ footer {
     -webkit-transform: translateY(22%);
         -ms-transform: translateY(22%);
             transform: translateY(22%);
-    margin-top: 0; }
+    margin-top: 0;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
   .wage {
-    line-height: 30px; }
+    line-height: 30px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
   .resume-foot {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

@@ -28,6 +28,13 @@ $('#reg-popup').on('click', function(){
     });
 });
 
+//попап оплата
+$('#mute').on('click', function(){
+    $('#payment-form-id').bPopup({
+        closeClass: 'close-modal-btn'
+    });
+});
+
 //открыть фильтер
 $('.btn-menu').on('click', function(){
     if($(this).hasClass('active')){
@@ -37,20 +44,14 @@ $('.btn-menu').on('click', function(){
         var btnClose = '<div id="close_filter" class="close-modal-btn"><span></span><span></span></div>';
         $('.filter-list-head').find('.filter-title').append(btnClose);
     }
-    // $('.main-filter').toggleClass('active');
-});
-
-//попап оплата
-$('#mute').on('click', function(){
-    $('#payment-form-id').bPopup({
-        closeClass: 'close-modal-btn'
-    });
+    $('.resume-item').height(0);
 });
 
 //закрыть фильтер
 $('.filter-title').on('click', function cls_filter(){
     $('.main-filter').removeClass('active');
     $('#close_filter').remove();
+    $('.resume-item').height('unset');
     console.log('cls');
 });
 
@@ -123,13 +124,15 @@ function swichToDesctop() {
 function swichToMobileResume() {
     $('.resume-file').each(function(index,elem){
         var resumeSideBar = $('.resume-foto').removeClass('col-3');
-        var resumeAdss = $('.similar-ads');
+        var resumeAdss    = $('.similar-ads');
+
         $('.resume-foto, .similar-ads').remove();
         $('.resume-row, .position-specialist').removeClass('col-9');
         $('.column-row').removeClass('col-8').removeClass('col-4');
-
         $(this).children('.resume-row').append('<!--RESUME FOTO MOVED START-->',resumeSideBar,'<!--RESUME FOTO MOVED END-->',resumeAdss);
+
     });
+
 }
 
 //перестройка стр резюме
@@ -138,11 +141,37 @@ function swichToDesctopResume() {
         var resumeSideBar2 = $(this).children('.resume-row').find('.resume-foto');
         $(this).find('.resume-row .resume-foto').remove();
         $('.resume-row, .position-specialist').addClass('col-9');
-
+        $('.column-row:first-child').addClass('col-8');
+        $('.column-row:last-child').addClass('col-4');
         $(this).append(resumeSideBar2);
 
         console.log(resumeSideBar2);
     });
+}
+
+//перестойка футера
+function footerMobile(){
+    var footerWrap = $('.footer');
+    var $headerNav = footerWrap.find('.header-nav').html();
+    var $copyright = footerWrap.find('.copyright').html();
+
+    var newFooter = `<div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="footer-wrap">
+                                <div class="footer-row">
+                                    <div class="logo">
+                                        <img src="img/logo.png" alt="">
+                                    </div>
+                                    <div class="header-nav header-nav-footer">
+                                        ${$headerNav}
+                                    </div>
+                                </div>
+                                <div class="copyright">${$copyright}</div>
+                            </div>
+                        </div>
+                    </div>`;
+    $('.footer .container-fluid').remove();
+    footerWrap.append(newFooter);
 }
 
 //свич
@@ -152,15 +181,24 @@ $(window).on('resize load',function () {
     var $container_desctop = $('.resume-container').hasClass('desctop-win');
     var $container_mobile  = $('.resume-container').hasClass('mobile-win');
 
-    if(widthWin <= 1023 && $container_desctop ){
-        $('.resume-container').removeClass('desctop-win');
-        $('.resume-container').addClass('mobile-win');
-        swichToMobile();
+    if(widthWin <= 1023 ){
+        if($container_desctop){
+            $('.resume-container').removeClass('desctop-win');
+            $('.resume-container').addClass('mobile-win');
+            swichToMobile();
+        }
+
+
+        footerMobile();
         console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
+
     }else if(widthWin >= 1024){
-        $('.resume-container').removeClass('mobile-win');
-        $('.resume-container').addClass('desctop-win');
-        swichToDesctop();
+        if(!$container_desctop){
+            $('.resume-container').removeClass('mobile-win');
+            $('.resume-container').addClass('desctop-win');
+            swichToDesctop();
+        }
+
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
 
     }
