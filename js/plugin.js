@@ -20,12 +20,14 @@ $('#enter-popup').on('click', function(){
         closeClass: 'close-modal-btn'
     });
 });
+
 //попап регистрация
 $('#reg-popup').on('click', function(){
     $('#registration-form-id').bPopup({
         closeClass: 'close-modal-btn'
     });
 });
+
 //открыть фильтер
 $('.btn-menu').on('click', function(){
     if($(this).hasClass('active')){
@@ -37,21 +39,23 @@ $('.btn-menu').on('click', function(){
     }
     // $('.main-filter').toggleClass('active');
 });
-//закрыть фильтер
-$('.filter-title').on('click', function cls_filter(){
-    $('.main-filter').removeClass('active');
-    $('#close_filter').remove();
-    console.log('cls');
-})
+
 //попап оплата
 $('#mute').on('click', function(){
     $('#payment-form-id').bPopup({
         closeClass: 'close-modal-btn'
     });
 });
+
+//закрыть фильтер
+$('.filter-title').on('click', function cls_filter(){
+    $('.main-filter').removeClass('active');
+    $('#close_filter').remove();
+    console.log('cls');
+});
+
 //перестройка гавной стр <@1023px
 function swichToMobile() {
-
     $(".resume-item").each(function(index,elem) {
         //перенос заголовка
         var resumeHead  = $(this).find('.position-specialist').html();
@@ -73,7 +77,6 @@ function swichToMobile() {
         $(this).append(timeCoastBlock);
         console.log('mobile');
     })
-
 }
 
 //перестройка гавной стр >@1023px
@@ -116,6 +119,33 @@ function swichToDesctop() {
     })
 }
 
+//перестройка стр резюме
+function swichToMobileResume() {
+    $('.resume-file').each(function(index,elem){
+        var resumeSideBar = $('.resume-foto').removeClass('col-3');
+        var resumeAdss = $('.similar-ads');
+        $('.resume-foto, .similar-ads').remove();
+        $('.resume-row, .position-specialist').removeClass('col-9');
+        $('.column-row').removeClass('col-8').removeClass('col-4');
+
+        $(this).children('.resume-row').append('<!--RESUME FOTO MOVED START-->',resumeSideBar,'<!--RESUME FOTO MOVED END-->',resumeAdss);
+    });
+}
+
+//перестройка стр резюме
+function swichToDesctopResume() {
+    $('.resume-file').each(function(index,elem){
+        var resumeSideBar2 = $(this).children('.resume-row').find('.resume-foto');
+        $(this).find('.resume-row .resume-foto').remove();
+        $('.resume-row, .position-specialist').addClass('col-9');
+
+        $(this).append(resumeSideBar2);
+
+        console.log(resumeSideBar2);
+    });
+}
+
+//свич
 $(window).on('resize load',function () {
     var widthWin       = document.body.clientWidth,   // ширина
         heightWin      = document.body.clientHeight;  // высота
