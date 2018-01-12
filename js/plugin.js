@@ -179,16 +179,12 @@ function footerMobile(){
 }
 
 function resizeImg() {
-    var xxx = $('.resume-foto').width() - $('.resume-3').width();
     if( $('.resume-img').width() < $('.resume-foto').width()){
         $('.resume-img').css({
             'left'      : '50%',
             'transform' : 'translateX(-50%) scale(1.211)',
             'position'  : 'absolute'
-
         });
-
-        console.log('xxx', $('.resume-3').width(), $('.resume-foto').width(), xxx);
     }
 }
 
