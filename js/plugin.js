@@ -88,9 +88,12 @@ function swichToDesctop() {
         var resumeHeadDesctop  = $(this).find('.resume-head').html();
         var resumeCoastDesctop = $(this).children('.resume-foot').find('.wage');
         var headerBlockDesctop = `<div class="resume-head d-flex justify-content-between">${resumeHeadDesctop}</div>`;
+
         $(this).find('.resume-head').remove();
         $(this).children('.resume-row').append(headerBlockDesctop);
+
         var searchCoastBlock = $(this).children('.resume-row').children('.resume-head').hasClass('.wage');
+
         if(searchCoastBlock){
             $(this).children('.resume-row').children('.resume-head').find('.wage').remove();
             $(this).children('.resume-row').children('.resume-head').append(searchCoastBlock);
@@ -101,6 +104,7 @@ function swichToDesctop() {
         //перенос фото
         var resumeFotoDesctop  = $(this).find('.resume-foto').html();
         var fotoBlockDesctop   = `<div class="resume-foto">${resumeFotoDesctop}</div>`;
+
         $(this).children('.resume-row').find('.resume-foto').remove();
         $(this).find('.resume-foto').remove();
         $(this).append(fotoBlockDesctop);
@@ -116,7 +120,7 @@ function swichToDesctop() {
             $(this).children('.resume-row').append(resumeTimeDestop);
         }
         console.log('desctop');
-        console.log('xxx',searchCoastBlock);
+
     })
 }
 
@@ -174,6 +178,23 @@ function footerMobile(){
     footerWrap.append(newFooter);
 }
 
+function resizeImg() {
+    var xxx = $('.resume-foto').width() - $('.resume-3').width();
+    if( $('.resume-img').width() < $('.resume-foto').width()){
+        $('.resume-foto').css({
+            'position'  : 'relative'
+        });
+        $('.resume-img').css({
+            'left'      : '50%',
+            'transform' : 'translateX(-50%) scale(1.211)',
+            'position'  : 'absolute',
+            'overflow'  : 'hidden'
+        });
+
+        console.log('xxx', $('.resume-3').width(), $('.resume-foto').width(), xxx);
+    }
+}
+
 //свич
 $(window).on('resize load',function () {
     var widthWin       = document.body.clientWidth,   // ширина
@@ -188,7 +209,7 @@ $(window).on('resize load',function () {
             swichToMobile();
         }
 
-        swichToMobileResume()
+        swichToMobileResume();
         footerMobile();
         console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
 
@@ -197,12 +218,15 @@ $(window).on('resize load',function () {
             $('.resume-container').removeClass('mobile-win');
             $('.resume-container').addClass('desctop-win');
             swichToDesctop();
-        }
 
-        swichToDesctopResume()
+        }
+        resizeImg();
+        swichToDesctopResume();
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
 
     }
     console.log('size: ', 'width:', widthWin,'height:',heightWin);
+
+
 });
 
