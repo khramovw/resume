@@ -403,7 +403,13 @@ header, footer {
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
       -ms-flex-order: 1;
-          order: 1; }
+          order: 1;
+  min-width: 150px;
+  max-width: 150px;
+  height: 150px;
+  overflow: hidden; }
+  .resume-foto img {
+    width: 100%; }
 
 .position-specialist {
   font-size: 22px;

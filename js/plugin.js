@@ -188,7 +188,7 @@ $(window).on('resize load',function () {
             swichToMobile();
         }
 
-
+        swichToMobileResume()
         footerMobile();
         console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
 
@@ -199,6 +199,7 @@ $(window).on('resize load',function () {
             swichToDesctop();
         }
 
+        swichToDesctopResume()
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
 
     }
