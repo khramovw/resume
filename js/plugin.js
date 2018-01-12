@@ -55,6 +55,23 @@ $('.filter-title').on('click', function cls_filter(){
     console.log('cls');
 });
 
+//ресайз изображения когда h > w
+function resizeImg() {
+
+    $('.resume-img').each(function(index,elem){
+
+        if( $(this).width() < 150 ){
+            $(this).css({
+                'left'      : '50%',
+                'transform' : 'translateX(-50%) scale(1.211)',
+                'position'  : 'absolute'
+            });
+        }
+        console.log('elem res',elem);
+    })
+}
+
+
 //перестройка гавной стр <@1023px
 function swichToMobile() {
     $(".resume-item").each(function(index,elem) {
@@ -120,8 +137,8 @@ function swichToDesctop() {
             $(this).children('.resume-row').append(resumeTimeDestop);
         }
         console.log('desctop');
-
-    })
+        resizeImg();
+    });
 }
 
 //перестройка стр резюме
@@ -178,19 +195,6 @@ function footerMobile(){
     footerWrap.append(newFooter);
 }
 
-//ресайз изображения когда h > w
-function resizeImg() {
-    if( $('.resume-img').width() < $('.resume-foto').width()){
-        $('.resume-img').css({
-            'left'      : '50%',
-            'transform' : 'translateX(-50%) scale(1.211)',
-            'position'  : 'absolute'
-        });
-    }
-}
-
-//ресайз изображения мобилке
-
 //свич
 $(window).on('resize load',function () {
     var widthWin       = document.body.clientWidth,   // ширина
@@ -216,8 +220,8 @@ $(window).on('resize load',function () {
             swichToDesctop();
 
         }
-        resizeImg();
         swichToDesctopResume();
+        resizeImg();
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
 
     }
