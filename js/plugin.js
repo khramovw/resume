@@ -67,7 +67,6 @@ function resizeImg() {
                 'height'    : 'unset'
             }).width(150);
         }
-        console.log(elem)
     })
 }
 
@@ -199,7 +198,7 @@ $(window).on('resize load',function () {
     var widthWin       = document.body.clientWidth,   // ширина
         heightWin      = document.body.clientHeight;  // высота
     var $container_desctop = $('.resume-container').hasClass('desctop-win');
-    var $container_mobile  = $('.resume-container').hasClass('mobile-win');
+    var $container_resume  = $('.resume').hasClass('desctop-win');
 
     if(widthWin <= 1023 ){
         if($container_desctop){
@@ -207,9 +206,12 @@ $(window).on('resize load',function () {
             $('.resume-container').addClass('mobile-win');
             swichToMobile();
         }
-
-        swichToMobileResume();
-        footerMobile();
+        if($container_resume){
+            $('.resume').removeClass('desctop-win');
+            $('.resume').addClass('mobile-win');
+            swichToMobileResume();
+            footerMobile();
+        }
         console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
 
     }else if(widthWin >= 1024){
@@ -217,15 +219,17 @@ $(window).on('resize load',function () {
             $('.resume-container').removeClass('mobile-win');
             $('.resume-container').addClass('desctop-win');
             swichToDesctop();
-
+        }
+        if(!$container_resume){
+            $('.resume').addClass('desctop-win');
+            $('.resume').removeClass('mobile-win');
+            swichToDesctopResume();
+            resizeImg();
         }
         swichToDesctopResume();
         resizeImg();
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
-
     }
     console.log('size: ', 'width:', widthWin,'height:',heightWin);
-
-
 });
 
