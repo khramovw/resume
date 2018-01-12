@@ -178,6 +178,7 @@ function footerMobile(){
     footerWrap.append(newFooter);
 }
 
+//ресайз изображения когда h > w
 function resizeImg() {
     if( $('.resume-img').width() < $('.resume-foto').width()){
         $('.resume-img').css({
@@ -187,6 +188,8 @@ function resizeImg() {
         });
     }
 }
+
+//ресайз изображения мобилке
 
 //свич
 $(window).on('resize load',function () {
