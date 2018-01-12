@@ -60,14 +60,14 @@ function resizeImg() {
     $('.resume-img').each(function(index,elem){
         if( $(this).width() < 150 ){
             $(this).css({
-                'top'       : '0',
+                'top'       : '-15%',
                 'left'      : '50%',
                 'transform' : 'translateX(-50%)',
                 'position'  : 'absolute',
-                'height'    : 'unset',
-                'width'     : '100%'
-            });
+                'height'    : 'unset'
+            }).width(150);
         }
+        console.log(elem)
     })
 }
 
