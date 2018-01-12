@@ -62,7 +62,7 @@ function resizeImg() {
             $(this).css({
                 'top'       : '0',
                 'left'      : '50%',
-                'transform' : 'translateX(-50%) scale(1.211)',
+                'transform' : 'translateX(-50%)',
                 'position'  : 'absolute',
                 'height'    : 'unset',
                 'width'     : '100%'
