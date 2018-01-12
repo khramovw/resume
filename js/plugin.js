@@ -57,20 +57,19 @@ $('.filter-title').on('click', function cls_filter(){
 
 //ресайз изображения когда h > w
 function resizeImg() {
-
     $('.resume-img').each(function(index,elem){
-
         if( $(this).width() < 150 ){
             $(this).css({
+                'top'       : '0',
                 'left'      : '50%',
                 'transform' : 'translateX(-50%) scale(1.211)',
-                'position'  : 'absolute'
+                'position'  : 'absolute',
+                'height'    : 'unset',
+                'width'     : '100%'
             });
         }
-        console.log('elem res',elem);
     })
 }
-
 
 //перестройка гавной стр <@1023px
 function swichToMobile() {
