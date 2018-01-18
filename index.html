@@ -779,8 +779,10 @@
         <div class="wpap-form-popup">
             <form name="enter-form-modal">
                 <div class="input-wrap-modal">
-                    <input class="input-modal in" type="text" placeholder="Электронная почта">
-                    <input class="input-modal in" type="text" placeholder="Пароль">
+                    <input class="input-modal in" type="email" required placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                    <input class="input-modal in" type="password" minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
+                    <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9</span>
                     <div class="check-box-modal">
                         <input id="enter-form-check" class="" type="checkbox">
                         <label for="enter-form-check">Чужой компьютер</label>
@@ -804,10 +806,14 @@
         <div class="wpap-form-popup">
             <form name="registration-form-modal">
                 <div class="input-wrap-modal">
-                    <input class="input-modal in" type="text" placeholder="Имя">
-                    <input class="input-modal in" type="text" placeholder="Электронная почта">
-                    <input class="input-modal in" type="text" placeholder="Пароль">
-                    <input class="input-modal in" type="text" placeholder="Номер моб. телефона">
+                    <input class="input-modal in" type="text" required minlength="3" maxlength="18" placeholder="Имя">
+                    <span class="form-error">Это поле обязательно к заполнению мин 3 символа</span>
+                    <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                    <input class="input-modal in" type="password" required minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
+                    <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9, 6-24 символов</span>
+                    <input class="input-modal in" type="tel" minlength="13" maxlength="13" pattern="[0-9]+" placeholder="Номер моб. телефона">
+                    <span class="form-error">Телефон в международном формате +7XXXXXXXXXX</span>
                     <div class="check-box-modal">
                         <input id="reg-form-check" class="" type="checkbox">
                         <label for="reg-form-check">Получать новости и специальные
@@ -838,7 +844,8 @@
         <div class="wpap-form-popup">
             <form name="recovery-form-modal">
                 <div class="input-wrap-modal">
-                    <input class="input-modal in" type="text" placeholder="Электронная почта">
+                    <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
                     <button type="submit">Сбросить текущий пароль</button>
                     <div class="subtitle-modal"><a href="">Восстановить по телефону</a></div>
                 </div>

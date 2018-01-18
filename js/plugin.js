@@ -56,18 +56,21 @@ $('.filter-title').on('click', function cls_filter(){
 });
 
 //ресайз изображения когда h > w
-function resizeImg() {
+function resizeImg( sizeImg=150 ) {
     $('.resume-img').each(function(index,elem){
         if( $(this).width() < 150 ){
+            console.log('sizeImg value up',sizeImg);
             $(this).css({
                 'top'       : '-15%',
                 'left'      : '50%',
                 'transform' : 'translateX(-50%)',
                 'position'  : 'absolute',
                 'height'    : 'unset'
-            }).width(150);
+            }).width(sizeImg);
+            console.log('sizeImg value',sizeImg);
         }
-    })
+    });
+    console.log('sizeImg',sizeImg);
 }
 
 //перестройка гавной стр <@1023px
@@ -135,7 +138,7 @@ function swichToDesctop() {
             $(this).children('.resume-row').append(resumeTimeDestop);
         }
         console.log('desctop');
-        resizeImg();
+
     });
 }
 
@@ -151,7 +154,6 @@ function swichToMobileResume() {
         $(this).children('.resume-row').append('<!--RESUME FOTO MOVED START-->',resumeSideBar,'<!--RESUME FOTO MOVED END-->',resumeAdss);
 
     });
-
 }
 
 //перестройка стр резюме
@@ -201,9 +203,11 @@ $(window).on('resize load',function () {
     var $container_resume  = $('.resume').hasClass('desctop-win');
 
     if(widthWin <= 1023 ){
+
         if($container_desctop){
             $('.resume-container').removeClass('desctop-win');
             $('.resume-container').addClass('mobile-win');
+            resizeImg(95);
             swichToMobile();
         }
         if($container_resume){
@@ -212,12 +216,16 @@ $(window).on('resize load',function () {
             swichToMobileResume();
             footerMobile();
         }
+
+
         console.log('swich To Mobile ON', 'width:', widthWin,'height:',heightWin);
 
-    }else if(widthWin >= 1024){
+    } else if(widthWin >= 1024){
+
         if(!$container_desctop){
             $('.resume-container').removeClass('mobile-win');
             $('.resume-container').addClass('desctop-win');
+            resizeImg(150);
             swichToDesctop();
         }
         if(!$container_resume){
@@ -227,9 +235,12 @@ $(window).on('resize load',function () {
             resizeImg();
         }
         swichToDesctopResume();
-        resizeImg();
+
+
+
         console.log('swich To Desctop ON', 'width:', widthWin,'height:',heightWin);
     }
+
     console.log('size: ', 'width:', widthWin,'height:',heightWin);
 });
 
