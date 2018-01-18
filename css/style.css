@@ -52,7 +52,12 @@ input:invalid:not(:placeholder-shown) {
     opacity: 1; }
 
 input :valid:not(:placeholder-shown) {
-  border-color: #46D7B6; }
+  border-color: #46D7B6;
+  background-image: url(../img/switch_on.png);
+  -webkit-background-size: 20px 20px;
+          background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 20px 20px; }
 
 input, select {
   outline: none;
