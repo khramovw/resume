@@ -461,7 +461,6 @@ header, footer {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   font-size: 18px;
-  margin-top: 8px;
   -webkit-box-ordinal-group: 3;
   -webkit-order: 2;
       -ms-flex-order: 2;
@@ -473,7 +472,8 @@ header, footer {
     padding: 0 10px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
-    height: fit-content; }
+    height: fit-content;
+    margin-top: 8px; }
 
 .visiting_time {
   margin-top: 18px;
