@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,15 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-resume.css">
 </head>
 <body>
-<!--PRELOADER START-->
-<div id="page-preloader" class="preloader">
-    <div class="round-preload"></div>
-    <img src="img/logo.png" alt="">
-</div>
-<!--PRELOADER END-->
 <!--HEADER START-->
 <header>
     <div class="container-fluid">
@@ -25,8 +19,7 @@
             <div class="header-wrap container d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <div class="logo-wrap">
-                        <div class="btn-menu">
-                            <span></span>
+                        <div class="btn-menu-back">
                             <span></span>
                             <span></span>
                         </div>
@@ -36,7 +29,7 @@
                 </div>
                 <div class="header-nav d-flex">
                     <ul>
-                        <li id="mute">
+                        <li id="mute on-icon">
                             <img class="notification-on" src="img/icon_sound_on.png" alt="">
                             <img class="notification-off active" src="img/icon_sound_off.png" alt="">
                         </li>
@@ -52,709 +45,180 @@
     </div>
 </header>
 <!--HEADER END-->
-<!--HEAD START-->
-<section class="head d-flex">
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col">
-                <form name="header-form">
-                    <div class="header-form-wrap">
-                        <div class="title">У тебя все получится!</div>
-                        <div class="subtitle">Ищи работников для своего бизнеса быстро и просто</div>
-                        <div class="header-form-input-wrap">
-                            <input type="text" class="in" placeholder="Введите ключевые слова..">
-                            <select name="" id="">
-                                <option value="0">Москва</option>
-                                <option value="1">Московска обл.</option>
-                                <option value="2">По всей России</option>
-                                <option value="3">Выбрать другой..</option>
-                            </select>
-                            <!-- /select -->
-                            <button type="submit">Найти</button>
-                        </div>
-                        <!-- /header-form-input-wrap -->
-                    </div>
-                </form>
-                <!-- /form/header-form -->
-            </div>
-        </div>
-    </div>
-</section>
-<!--HEAD END-->
 <!--MAIN START-->
-<main>
+<main class="resume">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-12">
-                <div class="wraper d-flex">
-                    <!--SIDEBAR START-->
-                    <aside class="main-filter  col-lg-4 col-12">
-                        <form name="filter-list-form">
-                            <div class="filter-list">
-                                <div class="filter-list-head">
-                                    <div class="filter-title">Фильтер</div>
-                                    <div class="filter-desc">Сфера деятельности:</div>
-                                </div>
-                                <!--/filter-list-head-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-5" type="checkbox">
-                                        <label for="filter-item-5">IT, интеренет, телеком</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-0" type="checkbox">
-                                        <label for="filter-item-0">Автомобильный бизнес</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-1" type="checkbox">
-                                        <label for="filter-item-1">Административная работа</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-2" type="checkbox">
-                                        <label for="filter-item-2">Банки, инвистиции</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-3" type="checkbox">
-                                        <label for="filter-item-3">Бухгалтерия, финансы</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-4" type="checkbox">
-                                        <label for="filter-item-4">Высший менеджмент</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-6" type="checkbox">
-                                        <label for="filter-item-6">Госслужба, НКО</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-7" type="checkbox">
-                                        <label for="filter-item-7">Домашний персонал</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-8" type="checkbox">
-                                        <label for="filter-item-8">ЖКХ, эксплуатация</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-9" type="checkbox">
-                                        <label for="filter-item-9">Исскуство, развлечения</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-10" type="checkbox">
-                                        <label for="filter-item-10">Консультирование</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-11" type="checkbox">
-                                        <label for="filter-item-11">Маркетинг, реклама, PR</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-12" type="checkbox">
-                                        <label for="filter-item-12">Медицина, фармацевтика</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-13" type="checkbox">
-                                        <label for="filter-item-13">Образование, наука</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-14" type="checkbox">
-                                        <label for="filter-item-14">Охрана, безопасность</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-15" type="checkbox">
-                                        <label for="filter-item-15">Продажи</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-17" type="checkbox">
-                                        <label for="filter-item-17">Производство, сырье, с/х</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-18" type="checkbox">
-                                        <label for="filter-item-18">Страхование</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-19" type="checkbox">
-                                        <label for="filter-item-19">Строительство</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-221" type="checkbox">
-                                        <label for="filter-item-221">Транспорт, логистика</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-21" type="checkbox">
-                                        <label for="filter-item-21">Туризм, рестораны</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-22" type="checkbox">
-                                        <label for="filter-item-22">Управление персоналом</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-23" type="checkbox">
-                                        <label for="filter-item-23">Фитнес, салоны красоты</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-list-item">
-                                    <div class="input-wrap">
-                                        <input id="filter-item-24" type="checkbox">
-                                        <label for="filter-item-24">Юриспруденция</label>
-                                    </div>
-                                </div>
-                                <!--/filter-list-item-->
-                                <div class="filter-select-wrap">
-                                    <select name="schedule" id="schedule">
-                                        <option value="0">График работы</option>
-                                        <option value="1">Полный день</option>
-                                        <option value="2">Неполный день</option>
-                                        <option value="3">Свободный график</option>
-                                        <option value="4">Сменный график</option>
-                                        <option value="4">Удаленно</option>
-                                        <option value="4">Вахтовый</option>
-                                        <option value="4">Релокация</option>
-                                        <option value="4">На проект</option>
-
-                                    </select>
-                                    <!-- /select -->
-                                    <select name="work_experience" id="work_experience">
-                                        <option value="0">Стаж работы, лет</option>
-                                        <option value="1">До года</option>
-                                        <option value="2">1-3</option>
-                                        <option value="3">3-5</option>
-                                        <option value="4">5-10</option>
-                                        <option value="4">более 10</option>
-                                    </select>
-                                    <!-- /select -->
-                                    <select name="education" id="education">
-                                        <option value="0">Образование</option>
-                                        <option value="1">Высшее</option>
-                                        <option value="2">Незаконченное высшие</option>
-                                        <option value="3">Среднее</option>
-                                        <option value="4">Среднее специальное</option>
-                                    </select>
-                                    <!-- /select -->
-                                    <select name="" id="sex">
-                                        <option value="0">Пол</option>
-                                        <option value="1">Мужской</option>
-                                        <option value="2">Женский</option>
-                                    </select>
-                                    <!-- /select -->
-                                    <select name="age" id="age">
-                                        <option value="0">Возраст, лет</option>
-                                        <option value="1">18-25</option>
-                                        <option value="2">25-35</option>
-                                        <option value="3">35-45</option>
-                                        <option value="4">45-60</option>
-                                    </select>
-                                    <!-- /select -->
-                                    <div class="wrap-salary">
-                                        <input type="text" class="in" placeholder="зарплата от">
-                                        <input type="text" class="in" placeholder="зарплата до">
-                                    </div>
-                                    <!-- /select -->
-                                    <button type="submit">Применить</button>
-                                </div>
-                                <!--/filter-select-wrap-->
+            <div class="col">
+                <!--BTEAD CRUMBS START-->
+                <div class="bread-crumbs-head">
+                    <nav class="crumbs-link">
+                        <ul class="d-flex">
+                            <li class="active"><a href="">Все резюме г. Москва</a></li>
+                            <li><a href="">Бухгалтерия г. Москва</a></li>
+                        </ul>
+                        <ul class="crumbs-info d-flex">
+                            <li class="crumbs-info-num">Номер объявления: <span>460800190</span></li>
+                            <li class="crumbs-info-time">размещено сегодня в <span>23:14</span></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--BTEAD CRUMBS END-->
+                <div class="resume-file d-flex">
+                    <div class="resume-row col-9">
+                        <!--RESUME FAILE MAIN START-->
+                        <div class="resume-file-main">
+                            <div class="resume-head d-flex justify-content-between">
+                                <div class="position-specialist col-9">Заместитель главного бухгалтера,
+                                    бухгалтер</div>
+                                <div class="wage">40 000 ₽</div>
                             </div>
-                        </form>
-                        <!-- /form/filter-list-form -->
-                        <form name="city-list">
-                            <div class="city-wraper">
-                                <div class="title">Резюме по месту положения</div>
-                                <div class="city-list">
-                                    <a href="#">Москва, </a>
-                                    <a href="#">Санкт-Петербург, </a>
-                                    <a href="#"> Абакан, </a>
-                                    <a href="#">Ангарск, </a>
-                                    <a href="#">Архангельск, </a>
-                                    <a href="#">Астрахань, </a>
-                                    <a href="#">Балашиха, </a>
-                                    <a href="#">Барнаул, </a>
-                                    <a href="#">Белгород, </a>
-                                    <a href="#">Бийск, </a>
-                                    <a href="#">Благовещенск, </a>
-                                    <a href="#">Братск, </a>
-                                    <a href="#">Брянск, </a>
-                                    <a href="#">Великий Новгород, </a>
-                                    <a href="#">Владивосток, </a>
-                                    <a href="#">Владимир, </a>
-                                    <a href="#">Волгоград Волжский, </a>
-                                    <a href="#">Вологда, </a>
-                                    <a href="#">Воронеж, </a>
-                                    <a href="#">Дзержинск, </a>
-                                    <a href="#">Долгопрудный, </a>
-                                    <a href="#">Донецк, </a>
-                                    <a href="#">Екатеринбург, </a>
-                                    <a href="#">Зеленоград,  </a>
-                                    <a href="#">Иваново, </a>
-                                    <a href="#">Ижевск, </a>
-                                    <a href="#">Иркутск, </a>
-                                    <a href="#">Йошкар-Ола, </a>
-                                    <a href="#">Казань, </a>
-                                    <a href="#">Калининград,  </a>
-                                    <a href="#">Калуга, </a>
-                                    <a href="#">Кемерово, </a>
-                                    <a href="#">Киров, </a>
-                                    <a href="#">Королев, </a>
-                                    <a href="#">Кострома, </a>
-                                    <a href="#">Красногорск, </a>
-                                    <a href="#">Краснодар, </a>
-                                    <a href="#">Красноярск, </a>
-                                    <a href="#">Курган, </a>
-                                    <a href="#">Курск, </a>
-                                    <a href="#">Липецк, </a>
-                                    <a href="#">Люберцы, </a>
-                                    <a href="#">Магнитогорск, </a>
-                                    <a href="#">Мытищи, </a>
-                                    <a href="#">Набережные Челны, </a>
-                                    <a href="#">Немчиновка, </a>
-                                    <a href="#">Нижневартовск, </a>
-                                    <a href="#">Нижнекамск, </a>
-                                    <a href="#">Нижний Новгород, </a>
-                                    <a href="#">Нижний Тагил, </a>
-                                    <a href="#">Новокузнецк, </a>
-                                    <a href="#">Новороссийск, </a>
-                                    <a href="#">Новосибирск, </a>
-                                    <a href="#">Одесса, </a>
-                                    <a href="#">Одинцово, </a>
-                                    <a href="#">Омск, </a>
-                                    <a href="#">Орел, </a>
-                                    <a href="#">Оренбург, </a>
-                                    <a href="#">Парголово, </a>
-                                    <a href="#">Пенза, </a>
-                                    <a href="#">Пермь, </a>
-                                    <a href="#">Петрозаводск, </a>
-                                    <a href="#">Подольск, </a>
-                                    <a href="#">Пушкин, </a>
-                                    <a href="#">Пушкино, </a>
-                                    <a href="#">Реутов, </a>
-                                    <a href="#">Ростов-на-Дону, </a>
-                                    <a href="#">Рязань, </a>
-                                    <a href="#">Самара, </a>
-                                    <a href="#">Саранск, </a>
-                                    <a href="#">Саратов, </a>
-                                    <a href="#">Северодвинск, </a>
-                                    <a href="#">Серпухов, </a>
-                                    <a href="#">Сетунь Малая, </a>
-                                    <a href="#">Смоленск, </a>
-                                    <a href="#">Сочи, </a>
-                                    <a href="#">Ставрополь, </a>
-                                    <a href="#">Стерлитамак, </a>
-                                    <a href="#">Сургут, </a>
-                                    <a href="#">Сыктывкар, </a>
-                                    <a href="#">Тамбов, </a>
-                                    <a href="#">Тверь, </a>
-                                    <a href="#">Тольятти, </a>
-                                    <a href="#">Томск, </a>
-                                    <a href="#">Тула, </a>
-                                    <a href="#">Тюмень, </a>
-                                    <a href="#">Улан-Удэ, </a>
-                                    <a href="#">Ульяновск, </a>
-                                    <a href="#">Уфа, </a>
-                                    <a href="#">Хабаровск, </a>
-                                    <a href="#">Химки, </a>
-                                    <a href="#">Чебоксары, </a>
-                                    <a href="#">Челябинск, </a>
-                                    <a href="#">Чита, </a>
-                                    <a href="#">Щелково, </a>
-                                    <a href="#">Энгельс, </a>
-                                    <a href="#">Якутск, </a>
-                                    <a href="#">Ярославль</a>
+                            <!--/resume-head-->
+                            <div class="wrap-column d-flex justify-content-between">
+                                <div class="column-row col-8">
+                                    <div class="title-res">Сфера деятельности: <span class="description-res">Бухгалтерия, финансы</span></div>
+                                    <div class="title-res">График работы: <span class="description-res">Полный день</span></div>
+                                    <div class="title-res">Образование: <span class="description-res">Высшее</span></div>
+                                    <div class="title-res">Пол: <span class="description-res">женский</span></div>
+                                    <div class="title-res">Опыт работы: <span class="description-res">8 лет</span></div>
                                 </div>
+                                <!--/column-row-->
+                                <div class="column-row col-4">
+                                    <div class="title-res">Возраст: <span class="description-res">26 лет</span></div>
+                                    <div class="title-res">Готовность <p> к командировкам: <span class="description-res">Иногда</span></p></div>
+                                    <div class="title-res">Переезд: <span class="description-res">Невозможен</span></div>
+                                    <div class="title-res">Гражданство: <span class="description-res">Россия</span></div>
+                                </div>
+                                <!--/column-row-->
                             </div>
-                        </form>
-                        <!-- /form/city-list -->
-                    </aside>
-                    <!--SIDEBAR END-->
-                    <!--MAIN CONTENT START-->
-                    <div class="resume-container desctop-win col-xl-9 col-lg-8 col-md-12 col-12">
-                            <div class="head-list">
-                                <div>Все резюме г. Москва <span>(6236)</span></div>
-                            </div>
-                            <!-- /head-list -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-1.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">
-                                            Бухгалтер / главный бухгалтер приходящий, удаленно
-                                        </div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-education">Высшее бразование</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                            <div class="resume-foto">
-                                <img class="resume-img" src="img/foto-2.png" alt="">
-                            </div>
-                            <div class="resume-row">
-                                <div class="resume-head d-flex justify-content-between">
-                                    <div class="position-specialist">Главный бухгалтер</div>
-                                    <div class="wage">50 000 ₽</div>
-                                </div>
-                                <div class="resume-tag">
-                                    <div class="tag-sex">Женщина</div>
-                                    <div class="tag-age">28 лет</div>
-                                    <div class="tag-experience">Стаж 10 лет</div>
-                                    <div class="tag-education">Образование</div>
-                                    <div class="tag-city">Москва</div>
-                                </div>
-                                <div class="visiting_time">Сегодня 11:20</div>
+                            <!--wrap-column-->
+                        </div>
+                        <!--RESUME FAILE MAIN END-->
+                        <!--RESUME DESCRIPTION START-->
+                        <div class="resume-descriptionn col">
+                            <div class="title">Описание</div>
+                            <div class="desc-wrap">
+                                Коммуникабельность, внимательность, стрессоустойчивость, желание работать и зарабатывать, расти по карьерной лестнице, целеустремленность, ответственность.
+                                Коммуникабельность, внимательность, стрессоустойчивость, желание работать и зарабатывать, расти по карьерной лестнице, целеустремленность, ответственность.
+                                Коммуникабельность, внимательность, стрессоустойчивость, желание работать и зарабатывать, расти по карьерной лестнице, целеустремленность, ответственность.
+                                Коммуникабельность, внимательность, стрессоустойчивость, желание работать и зарабатывать, расти по карьерной лестнице, целеустремленность, ответственность.
+                                Коммуникабельность, внимательность, стрессоустойчивость, желание работать и зарабатывать, расти по карьерной лестнице, целеустремленность, ответственность.
                             </div>
                         </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img"  src="img/picture_photo.png" alt="">
+                        <!--RESUME DESCRIPTION END-->
+                        <!--SIMILAR START-->
+                        <div class="similar-ads col">
+                            <div class="title">Похожие объявления</div>
+                            <div class="similar-ads-wrap d-flex">
+                                <div class="similar-box cropbox-box">
+                                    <a href="#">
+                                        <img class="cropbox-img" src="img/3911367371.jpg" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Генеральный директор</div>
-                                        <div class="wage">160 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 09:30</div>
+                                <div class="similar-box cropbox-box">
+                                    <a href="#">
+                                        <img class="cropbox-img" src="img/3990913271.jpg" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img"  src="img/foto-1.png" alt="">
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-2.png" alt="">
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/148717.jpg" alt="">
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
+                                </div>
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
+                                </div>
+                                <div class="similar-box">
+                                    <a href="#">
+                                        <img src="img/foto-2.png" alt="">
+                                        <div class="title-box">Бухгалтер, главный бухгалтер</div>
+                                        <div class="coast">40 000 Р</div>
+                                    </a>
                                 </div>
                             </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-1.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-foto" src="img/foto-2.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/picture_photo.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-1.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-2.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/resume-3.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/foto-1.png" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
-                            <div class="resume-item d-flex">
-                                <div class="resume-foto">
-                                    <img class="resume-img" src="img/22366436_1904341483164481_2580371210468297099_n.jpg" alt="">
-                                </div>
-                                <div class="resume-row">
-                                    <div class="resume-head d-flex justify-content-between">
-                                        <div class="position-specialist">Главный бухгалтер</div>
-                                        <div class="wage">40 000 ₽</div>
-                                    </div>
-                                    <div class="resume-tag">
-                                        <div class="tag-sex">Женщина</div>
-                                        <div class="tag-age">28 лет</div>
-                                        <div class="tag-experience">Стаж 10 лет</div>
-                                        <div class="tag-education">Образование</div>
-                                        <div class="tag-city">Москва</div>
-                                    </div>
-                                    <div class="visiting_time">Сегодня 17:00</div>
-                                </div>
-                            </div>
-                            <!-- /.resume-item -->
+                            <!--/similar-ads-wrap-->
+                            <div class="similar-btn-wrap"><button>Показать ещё объявления</button></div>
+                        </div>
+                        <!--SIMILAR END-->
                     </div>
-                    <!--MAIN CONTENT END-->
+                    <!--RESUME FOTO START-->
+                    <div class="resume-foto col-3 d-flex justify-content-start">
+                        <div class="foto-wrap">
+                            <img class="cropbox-img" src="img/3990913271.jpg" alt="">
+                        </div>
+                        <!--/foto-wrap-->
+                        <div class="line-tell">
+                            <button>+8 909 XXX XX XX<span>Показать</span></button>
+                        </div>
+                        <!--/line-tell-->
+                        <div class="line-adres">Адрес: <span>Москва, Кожуховская</span></div>
+                        <!--/line-adres-->
+                    </div>
+                    <!--RESUME FOTO END-->
                 </div>
-                <!--PAGINATION START-->
-                <nav class="pagination">
-                    <a href="#" class="next-page">Следующая страница <img src="img/icon_arrow_right.png" alt=""></a>
-                    <ul>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li><a href="#">11</a></li>
-                    </ul>
-                </nav>
-                <!--PAGINATION END-->
             </div>
         </div>
     </div>
 </main>
 <!--MAIN END-->
 <!--FOOTER START-->
-<footer>
+<footer class="footer">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="header-wrap container justify-content-between align-items-center">
                 <div class="logo">
-                    <div>
+                    <div class="img-wrap">
                         <a href="//www.free-kassa.ru/"><img src="//www.free-kassa.ru/img/fk_btn/9.png"></a>
-                        <img src="img/logo.png" alt="">
+                        <img class="logo-footer" src="img/logo.png" alt="">
                     </div>
-                    <div>© 2018 - Bank-Rezyume. Все права защищены.</div>
+                    <div class="copyright">© 2018 - Bank-Rezyume. Все права защищены.</div>
                 </div>
-                <div class="header-nav">
+                <div class="header-nav header-nav-footer">
                     <ul>
                         <li><a href="#">Правила сервиса</a></li>
                         <li><a href="#">Оферта</a></li>
@@ -767,160 +231,160 @@
 <!--FOOTER END-->
 <!--POPUPS START-->
 <div class="popups">
-<div id="enter-form-id" class="enter-form modal-pop">
-    <div class="close-modal-btn">
-        <span></span>
-        <span></span>
-    </div>
-    <div class="head-popup">
-        <div class="title-modal">Вход</div>
-        <div class="subtitle-modal"><a href="">Я не зарегистрирован</a></div>
-    </div>
-    <div class="wpap-form-popup">
-        <form name="enter-form-modal">
-            <div class="input-wrap-modal">
-                <input class="input-modal in" type="email" required placeholder="Электронная почта">
-                <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
-                <input class="input-modal in" type="password" minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
-                <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9</span>
-                <div class="check-box-modal">
-                    <input id="enter-form-check" class="" type="checkbox">
-                    <label for="enter-form-check">Чужой компьютер</label>
-                    <div class="subtitle-modal"><a href="">Забыли пароль?</a></div>
+    <div id="enter-form-id" class="enter-form modal-pop">
+        <div class="close-modal-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="head-popup">
+            <div class="title-modal">Вход</div>
+            <div class="subtitle-modal"><a href="">Я не зарегистрирован</a></div>
+        </div>
+        <div class="wpap-form-popup">
+            <form name="enter-form-modal">
+                <div class="input-wrap-modal">
+                    <input class="input-modal in" type="email" required placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                    <input class="input-modal in" type="password" minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
+                    <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9</span>
+                    <div class="check-box-modal">
+                        <input id="enter-form-check" class="" type="checkbox">
+                        <label for="enter-form-check">Чужой компьютер</label>
+                        <div class="subtitle-modal"><a href="">Забыли пароль?</a></div>
+                    </div>
+                    <button type="submit">Войти</button>
                 </div>
-                <button type="submit">Войти</button>
-            </div>
-        </form>
-    </div>
-</div>
-<!--/enter-form-->
-<div id="registration-form-id" class="registration-form modal-pop">
-    <div class="close-modal-btn">
-        <span></span>
-        <span></span>
-    </div>
-    <div class="head-popup">
-        <div class="title-modal">Регистрация</div>
-        <div class="subtitle-modal"><a href="">Я уже зарегистрирован</a></div>
-    </div>
-    <div class="wpap-form-popup">
-        <form name="registration-form-modal">
-            <div class="input-wrap-modal">
-                <input class="input-modal in" type="text" required minlength="3" maxlength="18" placeholder="Имя">
-                <span class="form-error">Это поле обязательно к заполнению мин 3 символа</span>
-                <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
-                <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
-                <input class="input-modal in" type="password" required minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
-                <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9, 6-24 символов</span>
-                <input class="input-modal in" type="tel" minlength="13" maxlength="13" pattern="\+\d{12}" placeholder="Номер моб. телефона">
-                <span class="form-error">Телефон в международном формате +7XXXXXXXXXX</span>
-                <div class="check-box-modal">
-                    <input id="reg-form-check" class="" type="checkbox">
-                    <label for="reg-form-check">Получать новости и специальные
-                        <p>предложения Bank-rezyume</p></label>
-                </div>
-                <button type="submit">Зарегистрироваться</button>
-            </div>
-        </form>
-        <div class="footer-modal">
-            <div class="footer-title">Нажимая «Зарегистрироваться»,
-                вы принимаете условия</div>
-            <div class="subtitle-modal"><a href="">пользовательского соглашения</a></div>
+            </form>
         </div>
     </div>
-</div>
-<!--/registration-form-->
-<div id="recovery-form-id" class="recovery-form modal-pop">
-    <div class="close-modal-btn">
-        <span></span>
-        <span></span>
-    </div>
-    <div class="head-popup">
-        <div class="title-modal">Восстановление доступа</div>
-        <div class="subtitle-modal"><a href="">Я вспомнил пароль</a></div>
-        <div class="title-description">Введите адрес электронной почты,
-            который был указан при регистрации.</div>
-    </div>
-    <div class="wpap-form-popup">
-        <form name="recovery-form-modal">
-            <div class="input-wrap-modal">
-                <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
-                <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
-                <button type="submit">Сбросить текущий пароль</button>
-                <div class="subtitle-modal"><a href="">Восстановить по телефону</a></div>
+    <!--/enter-form-->
+    <div id="registration-form-id" class="registration-form modal-pop">
+        <div class="close-modal-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="head-popup">
+            <div class="title-modal">Регистрация</div>
+            <div class="subtitle-modal"><a href="">Я уже зарегистрирован</a></div>
+        </div>
+        <div class="wpap-form-popup">
+            <form name="registration-form-modal">
+                <div class="input-wrap-modal">
+                    <input class="input-modal in" type="text" required minlength="3" maxlength="18" placeholder="Имя">
+                    <span class="form-error">Это поле обязательно к заполнению мин 3 символа</span>
+                    <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                    <input class="input-modal in" type="password" required minlength="6" maxlength="24" pattern="[a-zA-Z0-9]+" placeholder="Пароль">
+                    <span class="form-error">Это поле должно содержать латинцкие буквы и цыфры 0-9, 6-24 символов</span>
+                    <input class="input-modal in" type="tel" minlength="13" maxlength="13" pattern="[0-9]+" placeholder="Номер моб. телефона">
+                    <span class="form-error">Телефон в международном формате +7XXXXXXXXXX</span>
+                    <div class="check-box-modal">
+                        <input id="reg-form-check" class="" type="checkbox">
+                        <label for="reg-form-check">Получать новости и специальные
+                            <p>предложения Bank-rezyume</p></label>
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                </div>
+            </form>
+            <div class="footer-modal">
+                <div class="footer-title">Нажимая «Зарегистрироваться»,
+                    вы принимаете условия</div>
+                <div class="subtitle-modal"><a href="">пользовательского соглашения</a></div>
             </div>
-        </form>
+        </div>
+    </div>
+    <!--/registration-form-->
+    <div id="recovery-form-id" class="recovery-form modal-pop">
+        <div class="close-modal-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="head-popup">
+            <div class="title-modal">Восстановление доступа</div>
+            <div class="subtitle-modal"><a href="">Я вспомнил пароль</a></div>
+            <div class="title-description">Введите адрес электронной почты,
+                который был указан при регистрации.</div>
+        </div>
+        <div class="wpap-form-popup">
+            <form name="recovery-form-modal">
+                <div class="input-wrap-modal">
+                    <input class="input-modal in" type="email" required minlength="5" maxlength="24" placeholder="Электронная почта">
+                    <span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+                    <button type="submit">Сбросить текущий пароль</button>
+                    <div class="subtitle-modal"><a href="">Восстановить по телефону</a></div>
+                </div>
+            </form>
 
+        </div>
     </div>
-</div>
-<!--/recovery-form-->
-<div id="payment-form-id" class="payment-form modal-pop">
-    <div class="close-modal-btn">
-        <span></span>
-        <span></span>
-    </div>
-    <div class="head-popup">
-        <div class="title-modal">Доступ к контактам резюме на 30 дней</div>
-        <div class="title-description">В некоторых городах введен платный доступ к контактам резюме.
-            Для связи с соискателем выберите один из предложенных вариантов доступа.
-            Подробнее о платном доступе к контактной информации в резюме.</div>
-    </div>
-    <div class="wpap-form-popup">
-        <form name="payment-form-modal">
-            <div class="check-box-modal">
-                <input id="pay-form-check" class="" type="checkbox">
-                <label for="pay-form-check">
-                    Я ознакомлен и согласен с
-                    <span class="subtitle-modal"><a href="">Правилами сервиса</a></span>  и
-                    <span class="subtitle-modal"><a href="">Офертой</a></span>
-                </label>
-            </div>
-            <div class="box-wrap-modal">
-                <div class="item-box">
-                    <div class="head-popup">
-                        <div class="title-modal">Базовый</div>
-                        <div class="title-description">10 контактов</div>
-                    </div>
-                    <div class="coast-box">100 ₽</div>
-                    <button type="submit">Купить пакет</button>
+    <!--/recovery-form-->
+    <div id="payment-form-id" class="payment-form modal-pop">
+        <div class="close-modal-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="head-popup">
+            <div class="title-modal">Доступ к контактам резюме на 30 дней</div>
+            <div class="title-description">В некоторых городах введен платный доступ к контактам резюме.
+                Для связи с соискателем выберите один из предложенных вариантов доступа.
+                Подробнее о платном доступе к контактной информации в резюме.</div>
+        </div>
+        <div class="wpap-form-popup">
+            <form name="payment-form-modal">
+                <div class="check-box-modal">
+                    <input id="pay-form-check" class="" type="checkbox">
+                    <label for="pay-form-check">
+                        Я ознакомлен и согласен с
+                        <span class="subtitle-modal"><a href="">Правилами сервиса</a></span>  и
+                        <span class="subtitle-modal"><a href="">Офертой</a></span>
+                    </label>
                 </div>
-                <!--/item-box-->
-                <div class="item-box">
-                    <div class="head-popup">
-                        <div class="title-modal">Средний</div>
-                        <div class="title-description">150 контактов</div>
+                <div class="box-wrap-modal">
+                    <div class="item-box">
+                        <div class="head-popup">
+                            <div class="title-modal">Базовый</div>
+                            <div class="title-description">10 контактов</div>
+                        </div>
+                        <div class="coast-box">100 ₽</div>
+                        <button type="submit">Купить пакет</button>
                     </div>
-                    <div class="coast-box">1000 ₽</div>
-                    <button type="submit">Купить пакет</button>
-                </div>
-                <!--/item-box-->
-                <div class="item-box">
-                    <div class="head-popup">
-                        <div class="title-modal">Максимум</div>
-                        <div class="title-description">1500 контактов</div>
+                    <!--/item-box-->
+                    <div class="item-box">
+                        <div class="head-popup">
+                            <div class="title-modal">Средний</div>
+                            <div class="title-description">150 контактов</div>
+                        </div>
+                        <div class="coast-box">1000 ₽</div>
+                        <button type="submit">Купить пакет</button>
                     </div>
-                    <div class="coast-box">5000 ₽</div>
-                    <button type="submit">Купить пакет</button>
-                </div>
-                <!--/item-box-->
-                <div class="item-box">
-                    <div class="head-popup">
-                        <div class="title-modal">Безлимит</div>
-                        <div class="title-description">∞ контактов</div>
+                    <!--/item-box-->
+                    <div class="item-box">
+                        <div class="head-popup">
+                            <div class="title-modal">Максимум</div>
+                            <div class="title-description">1500 контактов</div>
+                        </div>
+                        <div class="coast-box">5000 ₽</div>
+                        <button type="submit">Купить пакет</button>
                     </div>
-                    <div class="coast-box">22000 ₽</div>
-                    <button type="submit">Купить пакет</button>
+                    <!--/item-box-->
+                    <div class="item-box">
+                        <div class="head-popup">
+                            <div class="title-modal">Безлимит</div>
+                            <div class="title-description">∞ контактов</div>
+                        </div>
+                        <div class="coast-box">22000 ₽</div>
+                        <button type="submit">Купить пакет</button>
+                    </div>
+                    <!--/item-box-->
                 </div>
-                <!--/item-box-->
-            </div>
-        </form>
+            </form>
+        </div>
+        <div class="title-description">
+            Срок действия пакета просмотров ограничен и отсчитывается с момента первого
+            просмотра контактов. Контакты соискателя будут доступны, пока резюме соискателя активно.
+        </div>
     </div>
-    <div class="title-description">
-        Срок действия пакета просмотров ограничен и отсчитывается с момента первого
-        просмотра контактов. Контакты соискателя будут доступны, пока резюме соискателя активно.
-    </div>
-</div>
-<!--/payment-form-->
+    <!--/payment-form-->
 </div>
 <!--POPUPS END-->
 <!--jQuery-->
@@ -933,6 +397,8 @@
 <script src="libs/jquery.formstyler.min.js"></script>
 <!--bpopup-->
 <script src="libs/jquery.bpopup.min.js"></script>
+<!--cropbox-->
+<script src="js/cropbox_img.js"></script>
 <!--Plugin-->
 <script src="js/plugin.js"></script>
 </body>
